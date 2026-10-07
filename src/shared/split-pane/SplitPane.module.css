@@ -1,0 +1,87 @@
+.split {
+  --split: 50;
+  display: grid;
+  grid-template-columns: calc(var(--split) * 1%) 10px minmax(0, 1fr);
+  height: 100%;
+  min-height: 0;
+}
+
+.split[data-split='20'] {
+  --split: 20;
+}
+
+.split[data-split='25'] {
+  --split: 25;
+}
+
+.split[data-split='30'] {
+  --split: 30;
+}
+
+.split[data-split='35'] {
+  --split: 35;
+}
+
+.split[data-split='40'] {
+  --split: 40;
+}
+
+.split[data-split='45'] {
+  --split: 45;
+}
+
+.split[data-split='50'] {
+  --split: 50;
+}
+
+.split[data-split='55'] {
+  --split: 55;
+}
+
+.split[data-split='60'] {
+  --split: 60;
+}
+
+.split[data-split='65'] {
+  --split: 65;
+}
+
+.split[data-split='70'] {
+  --split: 70;
+}
+
+.split[data-split='75'] {
+  --split: 75;
+}
+
+.split[data-split='80'] {
+  --split: 80;
+}
+
+.pane {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.handle {
+  background: var(--color-hairline);
+  cursor: col-resize;
+  touch-action: none;
+}
+
+.handle:hover,
+.handle:focus-visible {
+  background: var(--color-viridian);
+}
+
+@media (max-width: 760px) {
+  .split {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .handle {
+    display: none;
+  }
+}

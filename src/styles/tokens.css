@@ -1,0 +1,13 @@
+:root {
+  --color-lightbox: #e3e9eb;
+  --color-mount: #f6f7f5;
+  --color-ink: #14282e;
+  --color-ink-soft: #46585e;
+  --color-viridian: #17705f;
+  --color-hairline: #b9c4c8;
+  --color-rust: #b3402a;
+  --shadow-mount: 0 1px 3px rgb(20 40 46 / 0.28);
+  --font-ui: 'Hanken Grotesk', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --radius: 3px;
+}

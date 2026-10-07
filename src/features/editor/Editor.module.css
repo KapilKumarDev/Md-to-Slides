@@ -1,0 +1,37 @@
+.editor {
+  height: 100%;
+  min-height: 0;
+  background: var(--color-mount);
+}
+
+.editor :global(.cm-editor) {
+  height: 100%;
+  background: var(--color-mount);
+  color: var(--color-ink);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.editor :global(.cm-scroller) {
+  line-height: 1.65;
+}
+
+.editor :global(.cm-gutters) {
+  border-right: 1px solid var(--color-hairline);
+  background: var(--color-mount);
+  color: var(--color-ink-soft);
+}
+
+.editor :global(.cm-activeLine),
+.editor :global(.cm-activeLineGutter) {
+  background: var(--color-lightbox);
+}
+
+.editor :global(.cm-cursor) {
+  border-left-color: var(--color-viridian);
+}
+
+.editor :global(.cm-editor.cm-focused) {
+  outline: 2px solid var(--color-viridian);
+  outline-offset: -2px;
+}

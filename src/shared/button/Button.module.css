@@ -1,0 +1,33 @@
+.button {
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 120ms;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.quiet {
+  border-color: var(--color-hairline);
+  background: transparent;
+  color: var(--color-ink);
+}
+
+.quiet:hover:not(:disabled) {
+  background: var(--color-lightbox);
+}
+
+.primary {
+  background: var(--color-viridian);
+  color: var(--color-mount);
+}
+
+.primary:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--color-viridian) 85%, black);
+}

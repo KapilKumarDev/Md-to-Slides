@@ -1,0 +1,47 @@
+#print-root {
+  display: none;
+}
+
+@page {
+  size: 1280px 720px;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    margin: 0;
+    background: #fff;
+  }
+
+  #app-shell {
+    display: none !important;
+  }
+
+  #print-root {
+    display: block;
+  }
+
+  #print-root,
+  #print-root * {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  #print-root .print-page {
+    width: 1280px;
+    height: 720px;
+    overflow: hidden;
+    break-inside: avoid;
+  }
+
+  #print-root .print-page:not(:last-child) {
+    break-after: page;
+  }
+
+  #print-root .print-page > svg {
+    display: block;
+    width: 1280px;
+    height: 720px;
+  }
+}

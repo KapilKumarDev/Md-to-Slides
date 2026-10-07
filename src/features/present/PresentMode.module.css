@@ -1,0 +1,85 @@
+.present {
+  width: 100vw;
+  height: 100vh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: var(--color-ink);
+  color: var(--color-mount);
+}
+
+.audience {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+.stage {
+  width: min(100vw, calc(100vh * 16 / 9));
+}
+
+.presenter {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 16px;
+  height: 100%;
+  padding: 16px;
+  background: var(--color-lightbox);
+  color: var(--color-ink);
+}
+
+.current {
+  align-self: start;
+}
+
+.side {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+.heading {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.muted {
+  color: var(--color-ink-soft);
+}
+
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  grid-column: 1 / -1;
+  align-items: center;
+  gap: 12px;
+}
+
+.empty {
+  display: grid;
+  place-items: center;
+  gap: 16px;
+  height: 100%;
+  align-content: center;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .presenter {
+    grid-template-columns: minmax(0, 1fr);
+    overflow-y: auto;
+  }
+}

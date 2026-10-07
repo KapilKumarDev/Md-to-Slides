@@ -1,0 +1,14 @@
+.dropHint {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  border: 3px dashed var(--color-viridian);
+  background: rgb(23 112 95 / 0.16);
+  color: var(--color-ink);
+  font-size: 1.25rem;
+  font-weight: 600;
+  pointer-events: none;
+}
